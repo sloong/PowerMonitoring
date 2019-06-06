@@ -1,0 +1,36 @@
+﻿<Window x:Class="PowerMonitoringUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PowerMonitoringUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="检查运行间隔" HorizontalAlignment="Left" Margin="91,100,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="_RetryNum" HorizontalAlignment="Left" Height="23" Margin="196,154,0,0" TextWrapping="Wrap" Text="重试次数" VerticalAlignment="Top" Width="120"/>
+        <Button Content="应用" HorizontalAlignment="Left" Margin="230,337,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="退出" HorizontalAlignment="Left" Margin="394,337,0,0" VerticalAlignment="Top" Width="75" Click="Button_Exit_Click"/>
+        <TextBox x:Name="_Interval" HorizontalAlignment="Left" Height="23" Margin="196,102,0,0" TextWrapping="Wrap" Text="工作间隔" VerticalAlignment="Top" Width="120"/>
+        <Label Content="检查失败重试次数" HorizontalAlignment="Left" Margin="67,152,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="_TargetIP" HorizontalAlignment="Left" Height="23" Margin="196,195,0,0" TextWrapping="Wrap" Text="IP地址" VerticalAlignment="Top" Width="120"/>
+        <Label Content="目标IP地址" HorizontalAlignment="Left" Margin="104,193,0,0" VerticalAlignment="Top"/>
+        <TextBlock Margin="386,102,36,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="116"><Run Text="通过向目标IP地址（默认为网关地址）发送数据包检查网络可用性来确认市电是否正常"/><Run Text="。"/><LineBreak/><Run Text="要求主机有VPS接入，目标地址为可靠且直接接入市电的设备。"/><LineBreak/><Run Text="如果检查成功，则根据{检查运行间隔}配置定时运行。"/><LineBreak/><Run Text="如果检查失败，则每秒检查一次，重试{检查失败重试次数}次。如始终失败则在指定时间内发送关机命令。"/></TextBlock>
+        <TextBox x:Name="_OFFOptValue" HorizontalAlignment="Left" Height="23" Margin="484,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="_OFFOptName" Content="关机预留时间" HorizontalAlignment="Left" Margin="379,243,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="_InstallBtn" Content="安装服务" HorizontalAlignment="Left" Margin="386,44,0,0" VerticalAlignment="Top" Width="75" Click="Button_Install_Click"/>
+        <Label Content="服务状态" HorizontalAlignment="Left" Margin="104,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="_ServiceStatus" Content="尚未安装服务" HorizontalAlignment="Left" Margin="209,41,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="_UninstallBtn" Content="卸载服务" HorizontalAlignment="Left" Margin="386,44,0,0" VerticalAlignment="Top" Width="75" Click="Button_Uninstall_Click" Visibility="Hidden"/>
+        <Label Content="断电执行操作" HorizontalAlignment="Left" Margin="91,243,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="_OFFOpt" HorizontalAlignment="Left" Margin="196,243,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="_OFFOpt_SelectionChanged">
+            <ComboBoxItem Content="关机" Tag="Shutdown"/>
+            <ComboBoxItem Content="自定义命令" Tag="SpecialCMD"/>
+            <ComboBoxItem Content="什么也不做" Tag="Nothing"/>
+        </ComboBox>
+        <Button x:Name="_StartServiceBtn" Content="启动服务" HorizontalAlignment="Left" Margin="484,44,0,0" VerticalAlignment="Top" Width="75" Click="_StartServiceBtn_Click"/>
+        <Button x:Name="_StopServiceBtn" Content="停止服务" HorizontalAlignment="Left" Margin="484,44,0,0" VerticalAlignment="Top" Width="75" Click="_StopServiceBtn_Click"/>
+        <Button Content="刷新状态" HorizontalAlignment="Left" Margin="660,44,0,0" VerticalAlignment="Top" Width="75" Click="Button_Refresh_Click"/>
+
+    </Grid>
+</Window>

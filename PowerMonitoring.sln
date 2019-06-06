@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerMonitoring", "PowerMonitoring\PowerMonitoring.csproj", "{83EFF7E8-1109-4888-AAB2-B9A2B5210FF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerMonitoringUI", "PowerMonitoringUI\PowerMonitoringUI.csproj", "{08BE12D6-6777-4E45-A02E-767DAC8AFA6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83EFF7E8-1109-4888-AAB2-B9A2B5210FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83EFF7E8-1109-4888-AAB2-B9A2B5210FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83EFF7E8-1109-4888-AAB2-B9A2B5210FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83EFF7E8-1109-4888-AAB2-B9A2B5210FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BE12D6-6777-4E45-A02E-767DAC8AFA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BE12D6-6777-4E45-A02E-767DAC8AFA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BE12D6-6777-4E45-A02E-767DAC8AFA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BE12D6-6777-4E45-A02E-767DAC8AFA6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7567ABA8-169E-4547-8B6B-D011CF270A68}
+	EndGlobalSection
+EndGlobal
